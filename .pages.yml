@@ -26,3 +26,4 @@ collections:
       - {name: "date", label: "Tarih", widget: "datetime"}
       - {name: "title", label: "Baslik", widget: "string"}
       - {name: "body", label: "Icerik", widget: "markdown"}
+

@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "icerikler"
+    label: "İçerikler ve Yazılar"
+    folder: "content"
+    create: true
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
+      - {label: "Kategori / Tür", name: "type", widget: "select", options: ["Araştırma", "Röportaj", "Haber", "Makale", "Proje"]}
+      - {label: "Görsel", name: "image", widget: "image", required: false}
+      - {label: "PDF Dosyası", name: "pdf_file", widget: "file", required: false}
+      - label: "Diller"
+        name: "translations"
+        widget: "object"
+        fields:
+          - {label: "İngilizce (English)", name: "en", widget: "markdown"}
+          - {label: "Boşnakça (Bosanski)", name: "bs", widget: "markdown"}
+          - {label: "Sırpça (Српски)", name: "sr", widget: "markdown"}
+          - {label: "Arnavutça (Shqip)", name: "sq", widget: "markdown"}
+          - {label: "İbranice (עברית - RTL)", name: "he", widget: "markdown", required: false}

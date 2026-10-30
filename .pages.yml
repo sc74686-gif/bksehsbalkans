@@ -1,5 +1,112 @@
-content_dir: ""
-media_dir: ""
-branch: main
-publish_dir: ""
+backend:
+  name: github
+  repo: bksehsbalkans/bksehsbalkans
+  branch: main
 
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "research"
+    label: "Research"
+    folder: "content/research"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {name: "slug", label: "Slug (Kısa İsim / URL)", widget: "string"}
+      - {name: "date", label: "Tarih", widget: "datetime"}
+      - {name: "image", label: "Kapak Fotoğrafı", widget: "image", required: false}
+      - {name: "pdf", label: "PDF Dosyası", widget: "file", required: false}
+      - {name: "title", label: "Başlık (İngilizce / Varsayılan)", widget: "string"}
+      - {name: "title_bs", label: "Başlık (Boşnakça)", widget: "string", required: false}
+      - {name: "title_sr", label: "Başlık (Sırpça)", widget: "string", required: false}
+      - {name: "title_sq", label: "Başlık (Arnavutça)", widget: "string", required: false}
+      - {name: "title_he", label: "Başlık (İbranice)", widget: "string", required: false}
+      - {name: "summary", label: "Özet (İngilizce)", widget: "text", required: false}
+      - {name: "summary_bs", label: "Özet (Boşnakça)", widget: "text", required: false}
+      - {name: "summary_sr", label: "Özet (Sırpça)", widget: "text", required: false}
+      - {name: "summary_sq", label: "Özet (Arnavutça)", widget: "text", required: false}
+      - {name: "summary_he", label: "Özet (İbranice)", widget: "text", required: false}
+      - {name: "body", label: "İçerik (İngilizce)", widget: "markdown"}
+      - {name: "body_bs", label: "İçerik (Boşnakça)", widget: "markdown", required: false}
+      - {name: "body_sr", label: "İçerik (Sırpça)", widget: "markdown", required: false}
+      - {name: "body_sq", label: "İçerik (Arnavutça)", widget: "markdown", required: false}
+      - {name: "body_he", label: "İçerik (İbranice)", widget: "markdown", required: false}
+
+  - name: "interviews"
+    label: "Interviews"
+    folder: "content/interviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {name: "slug", label: "Slug (Kısa İsim / URL)", widget: "string"}
+      - {name: "date", label: "Tarih", widget: "datetime"}
+      - {name: "image", label: "Kapak Fotoğrafı", widget: "image", required: false}
+      - {name: "pdf", label: "PDF Dosyası", widget: "file", required: false}
+      - {name: "title", label: "Başlık (İngilizce / Varsayılan)", widget: "string"}
+      - {name: "title_bs", label: "Başlık (Boşnakça)", widget: "string", required: false}
+      - {name: "title_sr", label: "Başlık (Sırpça)", widget: "string", required: false}
+      - {name: "title_sq", label: "Başlık (Arnavutça)", widget: "string", required: false}
+      - {name: "title_he", label: "Başlık (İbranice)", widget: "string", required: false}
+      - {name: "summary", label: "Özet (İngilizce)", widget: "text", required: false}
+      - {name: "summary_bs", label: "Özet (Boşnakça)", widget: "text", required: false}
+      - {name: "summary_sr", label: "Özet (Sırpça)", widget: "text", required: false}
+      - {name: "summary_sq", label: "Özet (Arnavutça)", widget: "text", required: false}
+      - {name: "summary_he", label: "Özet (İbranice)", widget: "text", required: false}
+      - {name: "body", label: "İçerik (İngilizce)", widget: "markdown"}
+      - {name: "body_bs", label: "İçerik (Boşnakça)", widget: "markdown", required: false}
+      - {name: "body_sr", label: "İçerik (Sırpça)", widget: "markdown", required: false}
+      - {name: "body_sq", label: "İçerik (Arnavutça)", widget: "markdown", required: false}
+      - {name: "body_he", label: "İçerik (İbranice)", widget: "markdown", required: false}
+
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {name: "slug", label: "Slug (Kısa İsim / URL)", widget: "string"}
+      - {name: "date", label: "Tarih", widget: "datetime"}
+      - {name: "image", label: "Kapak Fotoğrafı", widget: "image", required: false}
+      - {name: "pdf", label: "PDF Dosyası", widget: "file", required: false}
+      - {name: "title", label: "Başlık (İngilizce / Varsayılan)", widget: "string"}
+      - {name: "title_bs", label: "Başlık (Boşnakça)", widget: "string", required: false}
+      - {name: "title_sr", label: "Başlık (Sırpça)", widget: "string", required: false}
+      - {name: "title_sq", label: "Başlık (Arnavutça)", widget: "string", required: false}
+      - {name: "title_he", label: "Başlık (İbranice)", widget: "string", required: false}
+      - {name: "summary", label: "Özet (İngilizce)", widget: "text", required: false}
+      - {name: "summary_bs", label: "Özet (Boşnakça)", widget: "text", required: false}
+      - {name: "summary_sr", label: "Özet (Sırpça)", widget: "text", required: false}
+      - {name: "summary_sq", label: "Özet (Arnavutça)", widget: "text", required: false}
+      - {name: "summary_he", label: "Özet (İbranice)", widget: "text", required: false}
+      - {name: "body", label: "İçerik (İngilizce)", widget: "markdown"}
+      - {name: "body_bs", label: "İçerik (Boşnakça)", widget: "markdown", required: false}
+      - {name: "body_sr", label: "İçerik (Sırpça)", widget: "markdown", required: false}
+      - {name: "body_sq", label: "İçerik (Arnavutça)", widget: "markdown", required: false}
+      - {name: "body_he", label: "İçerik (İbranice)", widget: "markdown", required: false}
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {name: "slug", label: "Slug (Kısa İsim / URL)", widget: "string"}
+      - {name: "date", label: "Tarih", widget: "datetime"}
+      - {name: "image", label: "Kapak Fotoğrafı", widget: "image", required: false}
+      - {name: "pdf", label: "PDF Dosyası", widget: "file", required: false}
+      - {name: "title", label: "Başlık (İngilizce / Varsayılan)", widget: "string"}
+      - {name: "title_bs", label: "Başlık (Boşnakça)", widget: "string", required: false}
+      - {name: "title_sr", label: "Başlık (Sırpça)", widget: "string", required: false}
+      - {name: "title_sq", label: "Başlık (Arnavutça)", widget: "string", required: false}
+      - {name: "title_he", label: "Başlık (İbranice)", widget: "string", required: false}
+      - {name: "summary", label: "Özet (İngilizce)", widget: "text", required: false}
+      - {name: "summary_bs", label: "Özet (Boşnakça)", widget: "text", required: false}
+      - {name: "summary_sr", label: "Özet (Sırpça)", widget: "text", required: false}
+      - {name: "summary_sq", label: "Özet (Arnavutça)", widget: "text", required: false}
+      - {name: "summary_he", label: "Özet (İbranice)", widget: "text", required: false}
+      - {name: "body", label: "İçerik (İngilizce)", widget: "markdown"}
+      - {name: "body_bs", label: "İçerik (Boşnakça)", widget: "markdown", required: false}
+      - {name: "body_sr", label: "İçerik (Sırpça)", widget: "markdown", required: false}
+      - {name: "body_sq", label: "İçerik (Arnavutça)", widget: "markdown", required: false}
+      - {name: "body_he", label: "İçerik (İbranice)", widget: "markdown", required: false}
